@@ -1,8 +1,13 @@
+import { useState } from "react";
 import Image from "next/image";
 import imageAbout from '@/public/images/m4-4.jpg'
 import Head from "next/head";
+import Loader from "@/components/Loader";
 
 const About = () => {
+
+    const [loading, setLoading] = useState(true)
+
   return (
     <>
     <Head>
@@ -11,7 +16,8 @@ const About = () => {
     </Head>
     <div className='about-site'>
         <div className='image-about'>
-            <Image src={imageAbout} alt='car' />
+            {loading ? <Loader /> : null}
+            <Image src={imageAbout} alt='car' onLoadingComplete={() => setLoading(false)}/>
         </div>
         <div className='info-about'>
         <div>

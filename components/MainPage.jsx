@@ -1,15 +1,23 @@
+import { useState } from "react"
 import Image from "next/image"
 import firstImage from '@/public/images/info-1.jpg'
 import secondImage from '@/public/images/info-2.jpg'
 import thirdImage from '@/public/images/info-3.jpg'
 import Link from "next/link"
+import Loader from "./Loader"
 
 const MainPage = () => {
+
+    const [loading1, setLoading1] = useState(true)
+    const [loading2, setLoading2] = useState(true)
+    const [loading3, setLoading3] = useState(true)
+
   return (
     <div className='main-article'>
         <div className='zero-article-main'>
             <div className='article-image'>
-                <Image src={thirdImage} alt='cars' />
+                {loading1 ? <Loader /> : null}
+                <Image src={thirdImage} alt='cars' onLoadingComplete={() => setLoading1(false)}/>
             </div>
             <div className='article-container'>
                 <div className='article-text'>
@@ -24,7 +32,8 @@ const MainPage = () => {
         </div>
         <div className='first-article-main' style={{ backgroundColor: '#131313'}}>
             <div className='article-image'>
-                <Image src={firstImage} alt='cars' />
+                {loading2 ? <Loader /> : null}
+                <Image src={firstImage} alt='cars' onLoadingComplete={() => setLoading2(false)}/>
             </div>
             <div className='article-container'>
                 <div className='article-text'>
@@ -39,7 +48,8 @@ const MainPage = () => {
         </div>
         <div className='second-article-main'>
             <div className='article-image'>
-                <Image src={secondImage} alt='cars' />
+                {loading3 ? <Loader /> : null}
+                <Image src={secondImage} alt='cars' onLoadingComplete={() => setLoading3(false)}/>
             </div>
             <div className='article-container'>
                 <div className='article-text'>

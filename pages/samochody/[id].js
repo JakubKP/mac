@@ -77,7 +77,7 @@ import gle4 from '@/public/images/gle-5.jpg'
 import CarInfo from "@/components/CarInfo"
 import CarInfoPage from "@/components/CarInfoPage"
 import Head from "next/head"
-import React from "react"
+import React, { useEffect } from "react"
 
 const cars = [
     {id: 'bmw-m4', image1: m4Baner, image2: m41, image3: m42, image4: m43, image5: m44, name: 'BMW M4', hp: '510', top: '3,4', drive: '4x4', max: '300', engine: '3.0L TwinTurbo', gearBox: 'Automatyczna', info: 'BMW M4 Coupé to purystyczne sportowe coupé o wyśmienitych właściwościach jezdnych. To zasługa wysokowydajnego silnika M TwinPower Turbo o mocy 480 KM, napędu tylnego oraz zaawansowanym technologiom zaczerpniętym ze sportów motorowych, takim jak układ jezdny M z aktywnym mechanizmem różnicowym M. Doskonale zestopniowana 6-biegowa skrzynia manualna M z krótkimi, precyzyjnymi skokami dźwigni umożliwia niezwykle intensywną interakcję między kierowcą a pojazdem. Sportowy wygląd zewnętrzny oraz charakterystyczne dla M wyposażenie i detale dodatkowo podkreślają dynamiczny charakter BMW M4 Coupé.', about: 'BMW M4 Competition Coupé to najmocniejszy model BMW serii 4 Coupé M. Wyposażone w wysokowydajny sześciocylindrowy rzędowy silnik benzynowy M TwinPower Turbo o mocy 510 KM oraz wiele rozwiązań układu napędowego i jezdnego zaczerpniętych z motorsportu oferuje dynamikę jazdy na najwyższym poziomie. Opcjonalny napęd na wszystkie koła M xDrive z aktywnym mechanizmem różnicowym M gwarantuje maksymalną dynamikę jazdy na co dzień i na torze wyścigowym. Atletyczny charakter to również zasługa wyrazistej stylistyki przodu, boków i tyłu, a także opcjonalnych karbonowych elementów M wewnątrz i na zewnątrz.', price: {one: '2000', two: '1500', three: '1000', four: '700', five: '600'}},
@@ -104,7 +104,6 @@ const Car = () => {
         <>
         {cars.map((car, i) => {
                 if(car.id === router.query.id) {
-                    console.log(car.name)
                     return (
                         <Head key={i}>
                             <title>{`${car.name} | Wypożyczalnia`}</title>

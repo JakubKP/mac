@@ -1,12 +1,21 @@
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import Loader from "./Loader"
 
 const CarInfoPage = ({ name, about, image2, image3, image4, image5, info, price }) => {
+
+    const [loading, setLoading] = useState(true)
+    const [loading2, setLoading2] = useState(true)
+    const [loading3, setLoading3] = useState(true)
+    const [loading4, setLoading4] = useState(true)
+
   return (
     <>
         <div className='first-article'>
             <div className='image'>
-                <Image src={image2} alt='car'/>
+                {loading ? <Loader /> : null}
+                <Image src={image2} alt='car' onLoadingComplete={() => setLoading(false)}/>
             </div>
             <div className='info'>
                 <div className='info-text'>
@@ -16,15 +25,18 @@ const CarInfoPage = ({ name, about, image2, image3, image4, image5, info, price 
         </div>
         <div className='second-article'>
             <div className='image'>
-                <Image src={image3} alt='car'/>
+                {loading ? <Loader /> : null}
+                <Image src={image3} alt='car' onLoadingComplete={() => setLoading2(false)}/>
             </div>
             <div className='second-image'>
-                <Image src={image4} alt='car'/>
+                {loading ? <Loader /> : null}
+                <Image src={image4} alt='car' onLoadingComplete={() => setLoading3(false)}/>
             </div>
         </div>
         <div className='third-article'>
             <div className='image'>
-                <Image src={image5} alt='car'/>
+                {loading ? <Loader /> : null}
+                <Image src={image5} alt='car' onLoadingComplete={() => setLoading4(false)}/>
             </div>
             <div className='price-info'>
                 <div className='price-table'>

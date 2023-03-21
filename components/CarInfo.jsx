@@ -1,12 +1,18 @@
+import { useState } from "react"
 import Image from "next/image"
 import { useRouter } from "next/router"
+import Loader from "./Loader"
 
 const CarInfo = ({ name, hp, max, top, drive, engine, gearBox, image1, image2, image3, image4, image5}) => {
+
+    const [loading, setLoading] = useState(true)
+
     const router = useRouter()
 
     return (
         <>
-            <Image src={image1.src} alt='car' width={2000} height={2000}/>
+            {loading ? <Loader /> : null}
+            <Image src={image1.src} alt='car' width={2000} height={2000} onLoadingComplete={() => setLoading(false)} />
             <div className='text-container-car'>
                 <div className='car-info'>
                     <div>MOC</div>
