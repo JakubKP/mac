@@ -1,10 +1,11 @@
 import { useState } from "react"
 import Image from "next/image"
-import firstImage from '@/public/images/info-1.jpg'
-import secondImage from '@/public/images/info-2.jpg'
-import thirdImage from '@/public/images/info-3.jpg'
+import firstImage from '@/public/images/maciek2.jpg'
+import secondImage from '@/public/images/maciek4.jpg'
+import thirdImage from '@/public/images/maciek1.jpg'
 import Link from "next/link"
 import Loader from "./Loader"
+import Reviews from "./Reviews"
 
 const MainPage = () => {
 
@@ -22,11 +23,11 @@ const MainPage = () => {
             <div className='article-container'>
                 <div className='article-text'>
                     <h2 style={{ fontSize: '16px', fontWeight: '300'}}>
-                        Nasza wypożyczalnia samochodów sportowych oferuje szeroki wybór modeli w tej klasie. To przede wszystkim takie marki jak BMW, Audi, Mercedes-Benz, Mercedes-AMG. Modele te będą idealne dla wszystkich, którzy są pasjonatami szybkiej jazdy oraz preferują najlepsze, niezapomniane emocje. W dodatku pojazdy w naszej flocie charakteryzują się nie tylko nieprzeciętnym wyglądem, ale również wieloma parametrami technicznymi, niczym prawdziwe auto wyścigowe.
+                    Zrozum jak ważne jest zdrowie dla Ciebie i twoich bliskich. Sprawiam, że ludzie stają się szczęśliwsi. Pracuję razem z podopiecznymi nad przełamywaniem barier mentalnych. Rezultatem jest progress. Pomagam w pozbyciu się bólu, więc jeśli odczuwasz dolegliwości bólowe związane ze swoim trybem życia np praca siedząca to zajmę się wszystkimi szczegółami. Pomogłem wielu swoim podopiecznym pomogę i Tobie. Jeśli chcesz poprawić znacząco sylwetkę lub interesuje Cię zwiększenie możliwości Twojego ciała i umysłu to prędkość osiągania Twoich celów poszybuje w kosmos!
                     </h2>
                 </div>
                 <div className='article-button'>
-                    <Link href='/samochody'>Samochody</Link>
+                    <Link href='/przemiany'>Przemiany</Link>
                 </div>
             </div>
         </div>
@@ -42,7 +43,7 @@ const MainPage = () => {
                     </h2>
                 </div>
                 <div className='article-button'>
-                    <Link href='/o-nas'>O nas</Link>
+                    <Link href='/o-mnie'>O Mnie</Link>
                 </div>
             </div>
         </div>
@@ -62,6 +63,7 @@ const MainPage = () => {
                 </div>
             </div>
         </div>
+        <Reviews />
     </div>
   )
 }

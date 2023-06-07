@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import Baner1 from '../public/images/s1.jpg'
-import Baner2 from '../public/images/s2.jpg'
-import Baner3 from '../public/images/s3.jpg'
+import Baner1 from '../public/images/maciekbaner.jpg'
+import Baner2 from '../public/images/maciekbaner.jpg'
+import Baner3 from '../public/images/maciekbaner.jpg'
 
 const Baner = () => {
 
@@ -134,12 +134,12 @@ const Baner = () => {
           <div className='first-baner' style={active === 1 ? { opacity: 1 } : null}>
             <div className='text-container'>
               <div className='beauty-text'>
-                <div ref={ref0} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>S</div>
-                <div ref={ref1} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>P</div>
-                <div ref={ref2} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>O</div>
-                <div ref={ref3} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>R</div>
-                <div ref={ref4} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>T</div>
-                <div ref={ref5} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>O</div>
+                <div ref={ref0} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>T</div>
+                <div ref={ref1} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>R</div>
+                <div ref={ref2} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>E</div>
+                <div ref={ref3} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>N</div>
+                <div ref={ref4} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>E</div>
+                <div ref={ref5} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>R</div>
                 <div ref={ref6} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>W</div>
                 <div ref={ref7} style={active === 1 ? null : {opacity: 0, transition: '0s'}}>E</div>
               </div>

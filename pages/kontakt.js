@@ -13,11 +13,11 @@ const kontakt = () => {
               <h2 style={{ fontSize: '20px', fontWeight: '500'}}>Kontakt</h2>
             </div>
             <div>ul. Jana 2 Szczecin</div>
-            <div>+48 789 092 213</div>
-            <div>wypozyczalnia@gmail.com</div>
+            <div>+48 531 494 254</div>
+            <div>email@gmail.com</div>
         </div>
         <div className='location'>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9507.531951990635!2d14.540427432621772!3d53.43480042046418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa09150730134d%3A0xffc33010e99286d0!2sAleja%20Papie%C5%BCa%20Jana%20Paw%C5%82a%20II%2C%2070-413%20Szczecin!5e0!3m2!1spl!2spl!4v1674754930555!5m2!1spl!2spl" width="100%" height="100%" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76612.24944345302!2d17.95578267641125!3d53.125761718109565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x291c50963e78ad51%3A0x22393ae3a8174a87!2sMaciej%20Mo%C5%BCd%C5%BCe%C5%84%20-%20Trener%20Personalny!5e0!3m2!1spl!2spl!4v1686042970016!5m2!1spl!2spl" width="100%" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
     </>
